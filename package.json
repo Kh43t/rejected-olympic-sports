@@ -1,0 +1,1 @@
+{"description":"One funny single-line sport the Olympics turned down, written to /output/entry.txt.","license":"MIT","main":"main.ts","name":"rejected-olympic-sports","scripts":{"start":"node main.ts"},"type":"module","version":"1.0.0"}
