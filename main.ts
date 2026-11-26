@@ -5,7 +5,7 @@
 // white space. It is checked here before it is written, so a bad line
 // fails loudly in development instead of silently failing the gate.
 
-import { mkdirSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 
 // The entry: a made-up event a broadcaster could announce with a straight
 // face, whose joke lands in one read and whose twist arrives at the end.
@@ -31,4 +31,11 @@ function validate(line: string): void {
 validate(LINE);
 mkdirSync("/output", { recursive: true });
 writeFileSync("/output/entry.txt", LINE, "utf8");
+
+// Read the file back and confirm it holds exactly the line we validated,
+// so a silent write failure can never pass as a good entry.
+const written = readFileSync("/output/entry.txt", "utf8");
+if (written !== LINE) {
+  throw new Error("entry.txt does not hold the validated line");
+}
 console.log(`wrote ${LINE.length} characters to /output/entry.txt`);
