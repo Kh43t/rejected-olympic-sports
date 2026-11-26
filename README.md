@@ -6,7 +6,7 @@
 
 One funny single-line sport the Olympics turned down: a made-up event, real enough to sound like a broadcast, absurd enough to be funny, short enough to fit in 200 characters. The program writes the line to `/output/entry.txt`.
 
-> Competitive Hide-and-Seek: the defending champion hasn't been found since 2008 and is still, technically, winning.
+> The Longest Goodbye: athletes compete to leave a party; the world record is four hours, set by a man who kept saying 'anyway'.
 
 ## Run it
 
